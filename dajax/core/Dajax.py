@@ -38,7 +38,7 @@ class Dajax(object):
     def __init__(self):
         self.calls = []
         
-    def render(self):
+    def json(self):
         return json.dumps(self.calls)
         
     def alert(self,message):
