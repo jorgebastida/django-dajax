@@ -1,0 +1,28 @@
+dajax (0.7.5) stable; urgency=medium
+
+  * Core:
+    - Dojo support
+    - Cleaned js files
+    - Ajax functions outside project folder now supported.
+  * Examples:
+    - Flickr in place editor
+
+ -- Benito Jorge Bastida <jorge@thecodefarm.com>  Mon, 16 Nov 2009 13:01:00 +0100
+
+dajax (0.7.4.1) stable; urgency=high
+
+  * Core:
+    - Typo error importing ajax functions
+
+ -- Benito Jorge Bastida <jorge@thecodefarm.com>  Mon, 13 Nov 2009 16:03:00 +0100
+
+dajax (0.7.4.0) stable; urgency=low
+
+  * Core:
+    - Typo error importing ajax functions
+  * Examples:
+    - Form validation using new utf-8 support
+    - New deserialize method
+    - New DAJAX_CACHE_CONTROL usage in dajax.core.js view
+
+ -- Benito Jorge Bastida <jorge@thecodefarm.com>  Mon, 13 Nov 2009 10:03:00 +0100

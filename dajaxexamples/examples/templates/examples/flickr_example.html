@@ -1,0 +1,64 @@
+{% extends "examples/examples_base.html"%}
+
+{% block extrahead %}
+<style type="text/css" media="screen">
+	#flickr_content{
+		width:500px;
+		font-family: Arial;
+	}
+	#title{
+		border:0px;
+		font-size:28px;
+		font-weight:bold;
+		width:100%;
+	}
+	#title:hover{
+		background-color: rgb(255, 255, 211);
+	}
+	.editing{
+		border: 1px inset rgb(233, 233, 174) !important;
+		padding: 4px;
+		font-size: 22px;
+		font-weight: bold;
+		background-color: rgb(255, 255, 211);
+		margin-bottom: 5px;
+	}
+	
+</style>
+<script type="text/javascript" charset="utf-8">
+	function toggle_editor(){
+		if(!$('title').hasClassName('editing')){
+			$('title').addClassName('editing');
+			$('title').select();
+			$('tools').show();
+		}
+	}
+	
+	function cancel_edit(){
+		$('tools').hide();
+		$('title').removeClassName('editing');
+		$('title').blur();
+	}
+	
+	function save(){
+		new_title = $('title').value;
+		$('title').value = "saving...";
+		Dajaxice.examples.flickr_save('Dajax.process',{'new_title':new_title});
+		
+	}
+</script>
+{% endblock %}
+
+
+{% block content %}
+<h1>Flickr in place editor</h1>
+	
+	<div id="flickr_content">
+		<input type="text" name="title" value="Default Title" id="title" onclick="toggle_editor();">
+		<div id="tools" style="display:none;">
+			<input id="save" value="SAVE" tabindex="12" type="submit" onclick="save();">&nbsp;&nbsp;<span>OR</span>&nbsp;&nbsp;<input value="Cancel" onclick="cancel_edit();" tabindex="13" type="button">
+		</div>
+		<a href="http://www.flickr.com/photos/neo2001/3729766083/" target='_blank'><img src="http://farm3.static.flickr.com/2603/3729766083_bea42f3df7.jpg" alt="image"></a>
+	</div>
+	
+{% endblock %}

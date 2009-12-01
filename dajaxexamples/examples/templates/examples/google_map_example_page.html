@@ -1,0 +1,109 @@
+{% extends "examples/examples_base.html"%}
+
+{% block extrahead %}
+	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={{ GOOGLE_API_KEY }}" type="text/javascript"></script>
+	<script type="text/javascript">
+	/**
+	An easy Googlem aps point manager ( it's an example. )
+	**/
+	var MapManager = Class.create();
+	MapManager.prototype = {
+
+		initialize: function(lat,lon,zoom){
+			this.center = new GLatLng(lat, lon);
+			this.zoom = zoom;
+			this.points = new Array();
+		},
+
+		create_map: function(){
+			if (GBrowserIsCompatible()) {
+				this.map = new GMap2($("the_map"));
+				this.map.setUIToDefault();
+				this.map.setCenter(this.center, this.zoom);
+				GEvent.addListener(this.map, 'zoomend', function(oldZoomLevel, newZoomLevel) { 
+				   if(newZoomLevel < 14) { 
+				     this.map.setZoom(14); 
+				   } 
+				}.bind(this));
+			}
+		},
+
+		get_static_point: function(lat,lng){
+			if (typeof(lng) == "undefined"){
+				ll = lat;
+			}
+			else{
+				ll = new GLatLng(parseFloat(lat),parseFloat(lng));
+			}
+			for (var p = this.points.length - 1; p >= 0; p--){
+				if (this.points[p].getLatLng().equals(ll)) {
+					return this.points[p];
+				}
+			}
+		},
+
+		create_dragable_point: function(lat,lon, id){
+
+			var baseIcon = new GIcon();
+			baseIcon.iconSize=new GSize(20,34);
+			baseIcon.shadowSize=new GSize(37,34);
+			baseIcon.iconAnchor=new GPoint(9,34);
+			baseIcon.infoWindowAnchor=new GPoint(16,0);
+			icon = new GIcon(baseIcon, 'http://www.google.com/mapfiles/marker.png',null,'http://www.google.com/mapfiles/shadow50.png');
+			point = new GMarker(new GLatLng(parseFloat(lat), parseFloat(lon)),{icon: icon,draggable: true});
+
+			this.map.addOverlay(point);
+			this.points.push(point);
+			//On dragend
+
+			GEvent.addListener(point, "dragend", function(overlaylatlng) {
+				point = this.get_static_point(overlaylatlng);
+				Dajaxice.examples.move_point('Dajax.process',{'lat':point.getLatLng().lat(),'lng':point.getLatLng().lng()});
+			}.bind(this));
+
+		}
+
+	};
+	</script>
+	<script type="text/javascript">
+	/**
+	Loop over the data adding points using MapManager
+	**/
+	
+	function example_draw_points(data){
+		for (var i=0; i < data.length; i++) {
+			Map.create_dragable_point(data[i].lat,data[i].lng,i);
+		};
+	}
+	
+	</script>
+	<script type="text/javascript">
+		var Map = new MapManager(37.413391,-122.085013, 15);
+	</script>
+	
+	<style type="text/css" media="screen">
+	#the_map{
+		border:1px solid black;
+		width:650px;
+		height:250px;
+	}
+	#example_log{
+		width:400px;
+	}
+	</style>
+{% endblock %}
+
+{% block extrabody %}
+	onload="Map.create_map();" onunload="GUnload()"
+{% endblock %}
+
+
+
+{% block content %}
+<h1>Map Machine!</h1>
+<h3>To see the map you need a Google Maps API key. Set it in settigs.py GOOGLE_API_KEY</h3>
+<div id="the_map"></div>
+<input type="button" name="Request Points" value="Request Points" id="requestpoints" onclick="Dajaxice.examples.request_points('Dajax.process');">
+<input type="text" name="non" value="" id="example_log">
+
+{% endblock %}

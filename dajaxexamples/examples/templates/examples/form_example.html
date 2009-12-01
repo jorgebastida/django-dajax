@@ -1,0 +1,12 @@
+{% extends "examples/examples_base.html"%}
+{% block content %}
+<h1>Ajax Form Machine!</h1>
+	<select name="combo1" id="combo1" onchange="Dajaxice.examples.updatecombo('Dajax.process',{'option':this.value})" size="1">
+		<option value="0">Select...</option>
+		<option value="0">Spain</option>
+		<option value="1">France</option>
+		<option value="2">United Kingdom</option>
+	</select>
+	<select name="combo2" id="combo2" onchange="" size="1"></select>
+
+{% endblock %}
