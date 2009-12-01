@@ -10,25 +10,25 @@ def request_points(request):
 	
 	dajax.addData(points,'example_draw_points')
 	dajax.assign('#example_log','value',"3 Points loaded...")
-	return dajax.render()
+	return dajax.json()
 	
 def move_point(request):
 	dajax = Dajax()
 	message = "Saved new location at, %s, %s" % (request.POST['lat'],request.POST['lng'])
 	dajax.assign('#example_log','value',message)
-	return dajax.render()
+	return dajax.json()
 	
 def multiply(request):
 	dajax = Dajax()
 	result = int(request.POST['a']) * int(request.POST['b'])
 	dajax.assign('#result','value',str(result))
-	return dajax.render()
+	return dajax.json()
 
 def randomize(request):
 	import random
 	dajax = Dajax()
 	dajax.assign('#result','value',random.randint(1, 10))
-	return dajax.render()
+	return dajax.json()
 
 def updatecombo(request):
 	dajax = Dajax()
@@ -40,7 +40,7 @@ def updatecombo(request):
 		out = '%s<option value="#">%s</option>' % (out,o,)
 		
 	dajax.assign('#combo2','innerHTML',out)
-	return dajax.render()
+	return dajax.json()
 
 def pagination(request):
 	from dajaxexamples.examples.views import get_pagination_page
@@ -54,7 +54,7 @@ def pagination(request):
 	
 	dajax = Dajax()
 	dajax.assign('#pagination','innerHTML',render)
-	return dajax.render()
+	return dajax.json()
 
 def send_form(request):
 	from dajaxice.utils import deserialize_form
@@ -71,7 +71,7 @@ def send_form(request):
 		dajax.removeCSSClass('#my_form input','error')
 		for error in form.errors:
 			dajax.addCSSClass('#id_%s' % error,'error')
-	return dajax.render()
+	return dajax.json()
 
 def flickr_save(request):
 	dajax = Dajax()
@@ -80,4 +80,4 @@ def flickr_save(request):
 	dajax.script('cancel_edit();')
 	dajax.assign('#title','value',new_title)
 	dajax.alert('Save complete using "%s"' % new_title )
-	return dajax.render()
+	return dajax.json()
