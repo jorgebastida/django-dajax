@@ -1,5 +1,6 @@
 var Dajax = Class.create();
 Dajax.prototype = {
+    initialize: function(){},
     process: function(data)
     {
         data.each(function(elem){
