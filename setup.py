@@ -72,7 +72,7 @@ setup(
 	author = "Benito Jorge Bastida Perez",
 	author_email = "jorge@thecodefarm.com",
 	description = "Easy to use ajax library for django",
-	download_url = "http://dajaxproject.googlecode.com/files/dajax-0.8.0.0.tar.gz",
+	download_url = "http://cloud.github.com/downloads/jorgebastida/dajax/dajax-0.8.0.0.tar.gz",
 	url = "http://dajaxproject.com",
 	packages=packages,
 	data_files=data_files,
