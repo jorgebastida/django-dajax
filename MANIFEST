@@ -1,6 +1,7 @@
 README
 COPYING
 INSTALL
+CHANGELOG
 setup.py
 dajax/__init__.py
 dajax/models.py
