@@ -14,8 +14,8 @@
 </form>
 <script type="text/javascript" charset="utf-8">
 	function send_form(){
-		data = $('my_form').serialize();
-		Dajaxice.examples.send_form('Dajax.process',{'form':data});
+		data = $('my_form').serialize(true);
+		Dajaxice.examples.send_form('Dajax.process', {'form':data});
 	}
 </script>
 	

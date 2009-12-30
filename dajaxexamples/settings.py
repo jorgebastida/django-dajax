@@ -111,3 +111,6 @@ DAJAXICE_FUNCTIONS = (
     'apiexamples.ajax.adddata_test',
     'apiexamples.ajax.param_test',
 )
+
+import logging
+logging.basicConfig(level=logging.DEBUG)

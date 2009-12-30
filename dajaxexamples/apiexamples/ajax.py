@@ -67,8 +67,8 @@ def adddata_test(request):
 	dajax.append('#console','innerHTML',"dajax.addData(range(0,10),'my_callback')<br/>")
 	return dajax.json()
 	
-def param_test(request):
+def param_test(request, what):
 	dajax = Dajax()
-	dajax.alert("You search = "+request.POST['what'])
-	dajax.append('#console','innerHTML',"dajax.alert(\'You search = \'+request.POST['what'])<br/>")
+	dajax.alert("You search = %s" % what)
+	dajax.append('#console','innerHTML',"dajax.alert(\'You search = %s\' % what)<br/>")
 	return dajax.json()
