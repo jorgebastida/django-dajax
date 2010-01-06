@@ -1,4 +1,6 @@
-Dajax is an easy to use ajax library for django inspired in xajax.
+Dajax is a powerfull tool to easily and super-fast development asynchronous presentation logic using python without almost using many lines of JS code.
+
+It's supports up to four of the most popular JS frameworks, including Prototype, jQuery, Dojo and mootols.
 
 Using dajaxice communication core, dajax implements an abstraction layer between the presentation logic managed with JS and your python business logic. With dajax you can modify your DOM structure directly from python.
 
