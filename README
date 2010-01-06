@@ -6,6 +6,7 @@ Using dajaxice communication core, dajax implements an abstraction layer between
 
 Note: If you want to avoid mixing your Presentation logic within your Business logic, try dajaxice . Dajaxice implements an easy to use protocol to invoke your ajax functions asynchronously without any JavaScript Framework requirement.
 
+Official site http://dajaxproject.com
 
 Dajax Home http://wiki.github.com/jorgebastida/django-dajax/0751-0800-upgrade-manual
 Upgrade Manual 0.7.5.1 -> 0.8.0.0  http://wiki.github.com/jorgebastida/django-dajax/0751-0800-upgrade-manual
