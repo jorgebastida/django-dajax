@@ -1,6 +1,6 @@
-Dajax is a powerfull tool to easily and super-fast development asynchronous presentation logic using python without almost using many lines of JS code.
+Dajax is a powerfull tool to easily and super-fastly develop asynchronous presentation logic in web applications using python and almost no lines of JS source code.
 
-It's supports up to four of the most popular JS frameworks, including Prototype, jQuery, Dojo and mootols.
+It supports up to four of the most popular JS frameworks: Prototype, jQuery, Dojo and mootols.
 
 Using dajaxice communication core, dajax implements an abstraction layer between the presentation logic managed with JS and your python business logic. With dajax you can modify your DOM structure directly from python.
 
