@@ -13,7 +13,6 @@ var Dajax = {
                 break;
         
                 case 'as':
-                    elem.val = clear_quotes(elem.val);
                     jQuery.each($(elem.id),function(){ this[elem.prop] = elem.val; });
                 break;
         
