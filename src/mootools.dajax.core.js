@@ -1,7 +1,11 @@
 var Dajax = {
     process: function(data)
     {
-        data.each(function(elem){
+        if(data=='DAJAXICE_EXCEPTION'){
+            alert('Something went wrong, please reload the page.');
+        }
+        else{
+            data.each(function(elem){
             switch(elem.cmd)
             {
                 case 'alert':
@@ -54,7 +58,8 @@ var Dajax = {
         
                 default:
                     alert('Unknown action!');
-            }
-        });
+                }
+            });
+        }
     }
 };

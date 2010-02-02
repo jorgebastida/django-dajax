@@ -13,3 +13,9 @@ Upgrade Manual 0.7.5.1 -> 0.8.0.0  http://wiki.github.com/jorgebastida/django-da
 Installation http://wiki.github.com/jorgebastida/django-dajax/installation
 
 Dajaxice Home http://github.com/jorgebastida/django-dajaxice
+
+NOTE About dajax.core.js flavours:
+    - django-dajax requires to include some static-flavoured js files in your html <head> section.
+    - django-dajax supports up to four js frameworks, so you need to include one that mach your js-framework requirements.
+    - That files resides inside src folder in your django-dajax src folder.
+    

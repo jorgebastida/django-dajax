@@ -1,7 +1,11 @@
 var Dajax = {
     process: function(data)
     {
-        dojo.forEach(data, function(elem,i){ 
+        if(data=='DAJAXICE_EXCEPTION'){
+            alert('Something went wrong, please reload the page.');
+        }
+        else{
+            dojo.forEach(data, function(elem,i){ 
             switch(elem.cmd)
             {
                 case 'alert':
@@ -54,7 +58,8 @@ var Dajax = {
         
                 default:
                     alert('Unknown action!');
-            }
-        });
+                }
+            });
+        }
     }
 };
