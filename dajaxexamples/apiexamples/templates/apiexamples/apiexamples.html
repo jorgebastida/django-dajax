@@ -64,24 +64,25 @@
     /**
     Callback test
     **/
-    
     function my_callback(data){
         alert(data+' received from server');
     }
     
     </script>
 
-<script src="http://xmlhttprequest.googlecode.com/svn/trunk/source/XMLHttpRequest.js" type="text/javascript" charset="utf-8"></script>
     {% dajaxice_js_import %}
 
 <script type="text/javascript" charset="utf-8">
     var Dajax = Class.create();
-	Dajax.prototype = {
-    
-    initialize:function(){},
+Dajax.prototype = {
+    initialize: function(){},
     process: function(data)
     {
-        data.each(function(elem){
+        if(data=='DAJAXICE_EXCEPTION'){
+            alert('Something went wrong, please reload the page.');
+        }
+        else{
+            data.each(function(elem){
             switch(elem.cmd)
             {
                 case 'alert':
@@ -134,12 +135,14 @@
         
                 default:
                     alert('Unknown action!');
-            }
-        });
+                }
+            });
+        }
     }
 };
 
 Dajax = new Dajax();
+
 </script>
 
     </head>

@@ -28,12 +28,15 @@
 
 <script type="text/javascript" charset="utf-8">
     var Dajax = Class.create();
-	Dajax.prototype = {
-    
-    initialize:function(){},
+Dajax.prototype = {
+    initialize: function(){},
     process: function(data)
     {
-        data.each(function(elem){
+        if(data=='DAJAXICE_EXCEPTION'){
+            alert('Something went wrong, please reload the page.');
+        }
+        else{
+            data.each(function(elem){
             switch(elem.cmd)
             {
                 case 'alert':
@@ -86,12 +89,14 @@
         
                 default:
                     alert('Unknown action!');
-            }
-        });
+                }
+            });
+        }
     }
 };
 
 Dajax = new Dajax();
+
 </script>
 	
 	{% block extrahead %}{% endblock %}
