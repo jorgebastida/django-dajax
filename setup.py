@@ -68,11 +68,11 @@ if len(sys.argv) > 1 and sys.argv[1] == 'bdist_wininst':
 
 setup(
 	name = "django-dajax",
-	version = "0.8.1",
+	version = "0.8.2",
 	author = "Benito Jorge Bastida Perez",
 	author_email = "jorge@thecodefarm.com",
 	description = "Easy to use library to create asynchronous presentation logic with django and dajaxice",
-	download_url = "http://cloud.github.com/downloads/jorgebastida/django-dajax/django-dajax-0.8.1.tar.gz",
+	download_url = "http://cloud.github.com/downloads/jorgebastida/django-dajax/django-dajax-0.8.2.tar.gz",
 	url = "http://dajaxproject.com",
 	packages=packages,
 	data_files=data_files,
