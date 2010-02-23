@@ -11,7 +11,7 @@ setup(
     packages=['dajax', 'dajax.core'],
     data_files=[('share/django-dajax', ['src/dojo.dajax.core.js', 'src/jquery.dajax.core.js', 
         'src/mootools.dajax.core.js', 'src/prototype.dajax.core.js'])],
-    requires=['dajaxice (>=0.1.1)'],
+    requires=['dajaxice (>=0.1.2)'],
     classifiers=['Development Status :: 4 - Beta',
                 'Environment :: Web Environment',
                 'Framework :: Django',
