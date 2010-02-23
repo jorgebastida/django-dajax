@@ -1,3 +1,4 @@
+/* Copyright (c) 2009-2010, Benito Jorge Bastida :: For further information check COPYING */
 var Dajax = {
     process: function(data)
     {
