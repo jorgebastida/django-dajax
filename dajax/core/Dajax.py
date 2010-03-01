@@ -75,7 +75,7 @@ class Dajax(object):
     def remove(self,id):
         self.calls.append({'cmd':'rm','id':id})
         
-    def addData(self,data,function):
+    def add_data(self,data,function):
         self.calls.append({'cmd':'data','val':data,'fun':function})
     
     def _clean(self, data):

@@ -63,8 +63,8 @@ def remove_test(request):
 
 def adddata_test(request):
 	dajax = Dajax()
-	dajax.addData(range(0,10),'my_callback')
-	dajax.append('#console','innerHTML',"dajax.addData(range(0,10),'my_callback')<br/>")
+	dajax.add_data(range(0,10),'my_callback')
+	dajax.append('#console','innerHTML',"dajax.add_data(range(0,10),'my_callback')<br/>")
 	return dajax.json()
 	
 def param_test(request, what):

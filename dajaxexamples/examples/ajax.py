@@ -8,7 +8,7 @@ def request_points(request):
     points.append({'lat':37.412061929307924,'lng':-122.08582878112793,'text':'Other Site #2'})
     points.append({'lat':37.41301636171327,'lng':-122.0780611038208,'text':'Other Site #3'})
     
-    dajax.addData(points,'example_draw_points')
+    dajax.add_data(points,'example_draw_points')
     dajax.assign('#example_log','value',"3 Points loaded...")
     return dajax.json()
     
