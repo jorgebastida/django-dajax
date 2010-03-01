@@ -63,12 +63,12 @@ def send_form(request, form):
     form = ExampleForm(form)
     
     if form.is_valid():
-        dajax.removeCSSClass('#my_form input','error')
+        dajax.remove_css_class('#my_form input','error')
         dajax.alert("This form is_valid(), your username is: %s" % form.cleaned_data.get('username'))
     else:
-        dajax.removeCSSClass('#my_form input','error')
+        dajax.remove_css_class('#my_form input','error')
         for error in form.errors:
-            dajax.addCSSClass('#id_%s' % error,'error')
+            dajax.add_css_class('#id_%s' % error,'error')
     return dajax.json()
 
 def flickr_save(request, new_title):

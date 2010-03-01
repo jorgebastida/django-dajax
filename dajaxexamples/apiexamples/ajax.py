@@ -21,14 +21,14 @@ def alert_test(request):
 	
 def cssadd_test(request):
 	dajax = Dajax()
-	dajax.addCSSClass('#block04 li', 'red')
-	dajax.append('#console','innerHTML',"dajax.addCSSClass('#block04 li',('red',))<br/>")
+	dajax.add_css_class('#block04 li', 'red')
+	dajax.append('#console','innerHTML',"dajax.add_css_class('#block04 li',('red',))<br/>")
 	return dajax.json()
 	
 def cssrem_test(request):
 	dajax = Dajax()
-	dajax.removeCSSClass('#block04 li','red')
-	dajax.append('#console','innerHTML',"dajax.removeCSSClass('#block04 li',('red',))<br/>")
+	dajax.remove_css_class('#block04 li','red')
+	dajax.append('#console','innerHTML',"dajax.remove_css_class('#block04 li',('red',))<br/>")
 	return dajax.json()
 
 def append_test(request):

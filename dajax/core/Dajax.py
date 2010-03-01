@@ -47,12 +47,12 @@ class Dajax(object):
     def assign(self,id,attribute,value):
         self.calls.append({'cmd':'as','id':id,'prop':attribute,'val':self._clean(value)})
         
-    def addCSSClass(self,id,value):
+    def add_css_class(self,id,value):
         if not hasattr(value,'__iter__'):
             value = [value]
         self.calls.append({'cmd':'addcc','id':id,'val':self._clean(value)})
         
-    def removeCSSClass(self,id,value):
+    def remove_css_class(self,id,value):
         if not hasattr(value,'__iter__'):
             value = [value]
         self.calls.append({'cmd':'remcc','id':id,'val':self._clean(value)})
