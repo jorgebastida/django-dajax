@@ -1,3 +1,12 @@
+dajax (0.8.4) stable; urgency=medium
+    
+    - Upgrade to dajaxice 0.1.3 (New Dajaxice.EXCEPTION)
+    - Dajax PEP8 naming style for addCSSClass and removeCSSClass 
+    - Fixed some bugs in examples
+    - Fixed unicode problems
+
+ -- Benito Jorge Bastida <jorge@thecodefarm.com>  Tue, 28 Mar 2010 23:00:00 +0100
+
 dajax (0.8.3) stable; urgency=medium
 
   * General:
