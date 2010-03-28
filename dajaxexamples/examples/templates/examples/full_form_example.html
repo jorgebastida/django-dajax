@@ -15,6 +15,9 @@
 <script type="text/javascript" charset="utf-8">
 	function send_form(){
 		data = $('my_form').serialize(true);
+		// jQuery
+		// If you are using jQuery, you need this form->object serializer
+		// http://github.com/cowboy/jquery-misc/blob/master/jquery.ba-serializeobject
 		Dajaxice.examples.send_form('Dajax.process', {'form':data});
 	}
 </script>

@@ -2,11 +2,11 @@ from distutils.core import setup
 
 setup(
     name = "django-dajax",
-    version = "0.8.3",
+    version = "0.8.4",
     author = "Benito Jorge Bastida Perez",
     author_email = "jorge@thecodefarm.com",
     description = "Easy to use library to create asynchronous presentation logic with django and dajaxice",
-    download_url = "http://cloud.github.com/downloads/jorgebastida/django-dajax/django-dajax-0.8.3.tar.gz",
+    download_url = "http://cloud.github.com/downloads/jorgebastida/django-dajax/django-dajax-0.8.4.tar.gz",
     url = "http://dajaxproject.com",
     packages=['dajax', 'dajax.core'],
     data_files=[('share/django-dajax', ['src/dojo.dajax.core.js', 'src/jquery.dajax.core.js', 

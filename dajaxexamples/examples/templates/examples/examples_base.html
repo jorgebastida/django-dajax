@@ -27,12 +27,13 @@
     {% dajaxice_js_import %}
 
 <script type="text/javascript" charset="utf-8">
-    var Dajax = Class.create();
+/* Copyright (c) 2009-2010, Benito Jorge Bastida :: For further information check COPYING */
+var Dajax = Class.create();
 Dajax.prototype = {
     initialize: function(){},
     process: function(data)
     {
-        if(data=='DAJAXICE_EXCEPTION'){
+        if(data==Dajaxice.EXCEPTION){
             alert('Something went wrong, please reload the page.');
         }
         else{
@@ -96,7 +97,6 @@ Dajax.prototype = {
 };
 
 Dajax = new Dajax();
-
 </script>
 	
 	{% block extrahead %}{% endblock %}

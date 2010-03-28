@@ -2,7 +2,7 @@
 var Dajax = {
     process: function(data)
     {
-        if(data=='DAJAXICE_EXCEPTION'){
+        if(data==Dajaxice.EXCEPTION){
             alert('Something went wrong, please reload the page.');
         }
         else{
