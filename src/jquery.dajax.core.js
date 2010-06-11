@@ -23,13 +23,13 @@ var Dajax = {
         
                 case 'addcc':
                     jQuery.each(elem.val,function(){
-                        $(elem.id).addClass(this);
+                        $(elem.id).addClass(String(this));
                     });
                 break;
             
                 case 'remcc':
                     jQuery.each(elem.val,function(){
-                        $(elem.id).removeClass(this);
+                        $(elem.id).removeClass(String(this));
                     });
                 break;
             
