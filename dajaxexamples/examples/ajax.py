@@ -1,5 +1,6 @@
 from dajax.core import Dajax
-    
+from dajaxice.core import dajaxice_functions
+
 def request_points(request):
     dajax = Dajax()
     
@@ -12,23 +13,31 @@ def request_points(request):
     dajax.assign('#example_log','value',"3 Points loaded...")
     return dajax.json()
     
+dajaxice_functions.register(request_points)
+
 def move_point(request, lat, lng):
     dajax = Dajax()
     message = "Saved new location at, %s, %s" % (lat, lng)
     dajax.assign('#example_log','value',message)
     return dajax.json()
-    
+
+dajaxice_functions.register(move_point)
+
 def multiply(request, a, b):
     dajax = Dajax()
     result = int(a) * int(b)
     dajax.assign('#result','value',str(result))
     return dajax.json()
 
+dajaxice_functions.register(multiply)
+
 def randomize(request):
     import random
     dajax = Dajax()
     dajax.assign('#result','value',random.randint(1, 10))
     return dajax.json()
+
+dajaxice_functions.register(randomize)
 
 def updatecombo(request, option):
     dajax = Dajax()
@@ -41,6 +50,8 @@ def updatecombo(request, option):
         
     dajax.assign('#combo2','innerHTML',out)
     return dajax.json()
+
+dajaxice_functions.register(updatecombo)
 
 def pagination(request, p):
     from dajaxexamples.examples.views import get_pagination_page
@@ -55,6 +66,8 @@ def pagination(request, p):
     dajax = Dajax()
     dajax.assign('#pagination','innerHTML',render)
     return dajax.json()
+
+dajaxice_functions.register(pagination)
 
 def send_form(request, form):
     from forms import ExampleForm
@@ -71,6 +84,8 @@ def send_form(request, form):
             dajax.add_css_class('#id_%s' % error,'error')
     return dajax.json()
 
+dajaxice_functions.register(send_form)
+
 def flickr_save(request, new_title):
     dajax = Dajax()
     # Use new_title...
@@ -78,3 +93,5 @@ def flickr_save(request, new_title):
     dajax.assign('#title','value', new_title)
     dajax.alert('Save complete using "%s"' % new_title )
     return dajax.json()
+    
+dajaxice_functions.register(flickr_save)
