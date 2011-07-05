@@ -56,7 +56,7 @@ Dajax.prototype = {
             break;
 
             default:
-                alert('Unknown action!');
+            break;
             }
         });
     }

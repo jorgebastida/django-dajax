@@ -54,7 +54,7 @@ var Dajax = {
             break;
 
             default:
-                alert('Unknown action!');
+            break;
             }
         });
     }
