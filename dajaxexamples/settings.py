@@ -84,8 +84,9 @@ INSTALLED_APPS = (
 
 GOOGLE_API_KEY = "YOUR_API"
 
-DAJAXICE_MEDIA_PREFIX = "dajax" # http://domain.com/dajax/
+DAJAXICE_MEDIA_PREFIX = "dajax"  # http://domain.com/dajax/
 DAJAXICE_CACHE_CONTROL = 10 * 24 * 60 * 60
+
 """
 #Deprecated
 DAJAXICE_FUNCTIONS = (
@@ -98,7 +99,7 @@ DAJAXICE_FUNCTIONS = (
     'examples.ajax.pagination',
     'examples.ajax.send_form',
     'examples.ajax.flickr_save',
-    
+
     #Ajax funtions registered to apiexamples.ajax
     'apiexamples.ajax.assign_test',
     'apiexamples.ajax.clear_test',

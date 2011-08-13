@@ -20,10 +20,10 @@
 				this.map = new GMap2($("the_map"));
 				this.map.setUIToDefault();
 				this.map.setCenter(this.center, this.zoom);
-				GEvent.addListener(this.map, 'zoomend', function(oldZoomLevel, newZoomLevel) { 
-				   if(newZoomLevel < 14) { 
-				     this.map.setZoom(14); 
-				   } 
+				GEvent.addListener(this.map, 'zoomend', function(oldZoomLevel, newZoomLevel) {
+				   if(newZoomLevel < 14) {
+				     this.map.setZoom(14);
+				   }
 				}.bind(this));
 			}
 		},
@@ -69,18 +69,18 @@
 	/**
 	Loop over the data adding points using MapManager
 	**/
-	
+
 	function example_draw_points(data){
 		for (var i=0; i < data.length; i++) {
 			Map.create_dragable_point(data[i].lat,data[i].lng,i);
 		};
 	}
-	
+
 	</script>
 	<script type="text/javascript">
 		var Map = new MapManager(37.413391,-122.085013, 15);
 	</script>
-	
+
 	<style type="text/css" media="screen">
 	#the_map{
 		border:1px solid black;
