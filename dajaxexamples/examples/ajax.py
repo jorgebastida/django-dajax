@@ -1,7 +1,8 @@
 from dajax.core import Dajax
-from dajaxice.core import dajaxice_functions
+from dajaxice.decorators import dajaxice_register
 
 
+@dajaxice_register
 def request_points(request):
     dajax = Dajax()
 
@@ -20,36 +21,32 @@ def request_points(request):
     dajax.assign('#example_log', 'value', "3 Points loaded...")
     return dajax.json()
 
-dajaxice_functions.register(request_points)
 
-
+@dajaxice_register
 def move_point(request, lat, lng):
     dajax = Dajax()
     message = "Saved new location at, %s, %s" % (lat, lng)
     dajax.assign('#example_log', 'value', message)
     return dajax.json()
 
-dajaxice_functions.register(move_point)
 
-
+@dajaxice_register
 def multiply(request, a, b):
     dajax = Dajax()
     result = int(a) * int(b)
     dajax.assign('#result', 'value', str(result))
     return dajax.json()
 
-dajaxice_functions.register(multiply)
 
-
+@dajaxice_register
 def randomize(request):
     import random
     dajax = Dajax()
     dajax.assign('#result', 'value', random.randint(1, 10))
     return dajax.json()
 
-dajaxice_functions.register(randomize)
 
-
+@dajaxice_register
 def updatecombo(request, option):
     dajax = Dajax()
     options = [['Madrid', 'Barcelona', 'Vitoria', 'Burgos'],
@@ -62,9 +59,8 @@ def updatecombo(request, option):
     dajax.assign('#combo2', 'innerHTML', out)
     return dajax.json()
 
-dajaxice_functions.register(updatecombo)
 
-
+@dajaxice_register
 def pagination(request, p):
     from dajaxexamples.examples.views import get_pagination_page
     from django.template.loader import render_to_string
@@ -79,9 +75,8 @@ def pagination(request, p):
     dajax.assign('#pagination', 'innerHTML', render)
     return dajax.json()
 
-dajaxice_functions.register(pagination)
 
-
+@dajaxice_register
 def send_form(request, form):
     from forms import ExampleForm
 
@@ -97,9 +92,8 @@ def send_form(request, form):
             dajax.add_css_class('#id_%s' % error, 'error')
     return dajax.json()
 
-dajaxice_functions.register(send_form)
 
-
+@dajaxice_register
 def flickr_save(request, new_title):
     dajax = Dajax()
     # Use new_title...
@@ -107,5 +101,3 @@ def flickr_save(request, new_title):
     dajax.assign('#title', 'value', new_title)
     dajax.alert('Save complete using "%s"' % new_title)
     return dajax.json()
-
-dajaxice_functions.register(flickr_save)
