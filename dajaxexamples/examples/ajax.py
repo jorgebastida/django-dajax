@@ -1,5 +1,6 @@
 from dajax.core import Dajax
 from dajaxice.decorators import dajaxice_register
+from django.template.loader import render_to_string
 
 
 @dajaxice_register
@@ -63,7 +64,6 @@ def updatecombo(request, option):
 @dajaxice_register
 def pagination(request, p):
     from dajaxexamples.examples.views import get_pagination_page
-    from django.template.loader import render_to_string
     try:
         page = int(p)
     except:
