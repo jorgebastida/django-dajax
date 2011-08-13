@@ -157,7 +157,7 @@ Dajax = new Dajax();
                 <li>Element #4</li>
                 <li>Element #5</li>
                 <li>Element #6</li>
-                <li><input type="button" name="" value="dajax.assing" onclick="Dajaxice.apiexamples.assign_test('Dajax.process');" id=""></li>
+                <li><input type="button" name="" value="dajax.assing" onclick="Dajaxice.apiexamples.assign_test(Dajax.process);" id=""></li>
             </ul>
         </div>
 
@@ -168,7 +168,7 @@ Dajax = new Dajax();
                 <li>Element #4</li>
                 <li>Element #5</li>
                 <li>Element #6</li>
-                <li><input type="button" name="" value="dajax.clear" onclick="Dajaxice.apiexamples.clear_test('Dajax.process')" id=""></li>
+                <li><input type="button" name="" value="dajax.clear" onclick="Dajaxice.apiexamples.clear_test(Dajax.process)" id=""></li>
             </ul>
         </div>
 
@@ -179,7 +179,7 @@ Dajax = new Dajax();
                 <li>Element #4</li>
                 <li>Element #5</li>
                 <li>Element #6</li>
-                <li><input type="button" name="" value="dajax.alert" onclick="Dajaxice.apiexamples.alert_test('Dajax.process')" id=""></li>
+                <li><input type="button" name="" value="dajax.alert" onclick="Dajaxice.apiexamples.alert_test(Dajax.process)" id=""></li>
             </ul>
         </div>
 
@@ -188,8 +188,8 @@ Dajax = new Dajax();
                 <li>Element #1</li>
                 <li>Element #3</li>
                 <li>Element #4</li>
-                <li><input type="button" name="" value="dajax.add_css_class" onclick="Dajaxice.apiexamples.cssadd_test('Dajax.process')" id=""></li>
-                <li><input type="button" name="" value="dajax.remove_css_class" onclick="Dajaxice.apiexamples.cssrem_test('Dajax.process')" id=""></li>
+                <li><input type="button" name="" value="dajax.add_css_class" onclick="Dajaxice.apiexamples.cssadd_test(Dajax.process)" id=""></li>
+                <li><input type="button" name="" value="dajax.remove_css_class" onclick="Dajaxice.apiexamples.cssrem_test(Dajax.process)" id=""></li>
             </ul>
         </div>
 
@@ -200,7 +200,7 @@ Dajax = new Dajax();
                 <li class="row">Element #4</li>
                 <li class="row">Element #5</li>
                 <li class="row">Element #6</li>
-                <li><input type="button" name="" value="dajax.append" onclick="Dajaxice.apiexamples.append_test('Dajax.process')" id=""></li>
+                <li><input type="button" name="" value="dajax.append" onclick="Dajaxice.apiexamples.append_test(Dajax.process)" id=""></li>
             </ul>
         </div>
 
@@ -211,7 +211,7 @@ Dajax = new Dajax();
                 <li class="row">Element #4</li>
                 <li class="row">Element #5</li>
                 <li class="row">Element #6</li>
-                <li><input type="button" name="" value="dajax.prepend" onclick="Dajaxice.apiexamples.prepend_test('Dajax.process')" id=""></li>
+                <li><input type="button" name="" value="dajax.prepend" onclick="Dajaxice.apiexamples.prepend_test(Dajax.process)" id=""></li>
             </ul>
         </div>
 
@@ -222,7 +222,7 @@ Dajax = new Dajax();
                 <li>Element #4</li>
                 <li>Element #5</li>
                 <li>Element #6</li>
-                <li><input type="button" name="" value="dajax.redirect" onclick="Dajaxice.apiexamples.redirect_test('Dajax.process')" id=""></li>
+                <li><input type="button" name="" value="dajax.redirect" onclick="Dajaxice.apiexamples.redirect_test(Dajax.process)" id=""></li>
             </ul>
         </div>
 
@@ -233,7 +233,7 @@ Dajax = new Dajax();
                 <li>Element #4</li>
                 <li>Element #5</li>
                 <li>Element #6</li>
-                <li><input type="button" name="" value="dajax.script" onclick="Dajaxice.apiexamples.script_test('Dajax.process')" id=""></li>
+                <li><input type="button" name="" value="dajax.script" onclick="Dajaxice.apiexamples.script_test(Dajax.process)" id=""></li>
             </ul>
         </div>
 
@@ -244,7 +244,7 @@ Dajax = new Dajax();
                 <li class="row">Element #4</li>
                 <li class="row">Element #5</li>
                 <li class="row">Element #6</li>
-                <li><input type="button" name="" value="dajax.remove" onclick="Dajaxice.apiexamples.remove_test('Dajax.process')" id=""></li>
+                <li><input type="button" name="" value="dajax.remove" onclick="Dajaxice.apiexamples.remove_test(Dajax.process)" id=""></li>
             </ul>
         </div>
 
@@ -255,7 +255,7 @@ Dajax = new Dajax();
                 <li>Element #4</li>
                 <li>Element #5</li>
                 <li>Element #6</li>
-                <li><input type="button" name="" value="dajax.add_data" onclick="Dajaxice.apiexamples.adddata_test('Dajax.process')" id=""></li>
+                <li><input type="button" name="" value="dajax.add_data" onclick="Dajaxice.apiexamples.adddata_test(Dajax.process)" id=""></li>
             </ul>
         </div>
 
@@ -266,7 +266,7 @@ Dajax = new Dajax();
                 <li>Element #4</li>
                 <li>Element #5</li>
                 <li><input type="text" name="what" value="Type..." id="what" style="width:95%"></li>
-                <li><input type="button" name="" value="Parameters" onclick="Dajaxice.apiexamples.param_test('Dajax.process',{'what':document.getElementById('what').value})" id=""></li>
+                <li><input type="button" name="" value="Parameters" onclick="Dajaxice.apiexamples.param_test(Dajax.process, {'what':document.getElementById('what').value})" id=""></li>
             </ul>
         </div>
         <div style="clear:both;"></div>

@@ -6,7 +6,7 @@
 <div class="pagination">
     <span class="step-links">
         {% if items.has_previous %}
-            <a href="#" onclick="Dajaxice.examples.pagination('Dajax.process',{'p':{{ items.previous_page_number }}})">previous</a>
+            <a href="#" onclick="Dajaxice.examples.pagination(Dajax.process,{'p':{{ items.previous_page_number }}})">previous</a>
         {% endif %}
 
         <span class="current">
@@ -14,7 +14,7 @@
         </span>
 
         {% if items.has_next %}
-            <a href="#" onclick="Dajaxice.examples.pagination('Dajax.process',{'p':{{ items.next_page_number }}})">next</a>
+            <a href="#" onclick="Dajaxice.examples.pagination(Dajax.process,{'p':{{ items.next_page_number }}})">next</a>
         {% endif %}
     </span>
 </div>

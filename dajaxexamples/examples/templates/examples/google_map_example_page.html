@@ -58,7 +58,7 @@
 
 			GEvent.addListener(point, "dragend", function(overlaylatlng) {
 				point = this.get_static_point(overlaylatlng);
-				Dajaxice.examples.move_point('Dajax.process',{'lat':point.getLatLng().lat(),'lng':point.getLatLng().lng()});
+				Dajaxice.examples.move_point(Dajax.process,{'lat':point.getLatLng().lat(),'lng':point.getLatLng().lng()});
 			}.bind(this));
 
 		}
@@ -103,7 +103,7 @@
 <h1>Map Machine!</h1>
 <h3>To see the map you need a Google Maps API key. Set it in settigs.py GOOGLE_API_KEY</h3>
 <div id="the_map"></div>
-<input type="button" name="Request Points" value="Request Points" id="requestpoints" onclick="Dajaxice.examples.request_points('Dajax.process');">
+<input type="button" name="Request Points" value="Request Points" id="requestpoints" onclick="Dajaxice.examples.request_points(Dajax.process);">
 <input type="text" name="non" value="" id="example_log">
 
 {% endblock %}
