@@ -87,34 +87,6 @@ GOOGLE_API_KEY = "YOUR_API"
 DAJAXICE_MEDIA_PREFIX = "dajax"  # http://domain.com/dajax/
 DAJAXICE_CACHE_CONTROL = 10 * 24 * 60 * 60
 
-"""
-#Deprecated
-DAJAXICE_FUNCTIONS = (
-    #Ajax funtions registered to examples.ajax
-    'examples.ajax.request_points',
-    'examples.ajax.move_point',
-    'examples.ajax.multiply',
-    'examples.ajax.randomize',
-    'examples.ajax.updatecombo',
-    'examples.ajax.pagination',
-    'examples.ajax.send_form',
-    'examples.ajax.flickr_save',
-
-    #Ajax funtions registered to apiexamples.ajax
-    'apiexamples.ajax.assign_test',
-    'apiexamples.ajax.clear_test',
-    'apiexamples.ajax.alert_test',
-    'apiexamples.ajax.cssadd_test',
-    'apiexamples.ajax.cssrem_test',
-    'apiexamples.ajax.append_test',
-    'apiexamples.ajax.prepend_test',
-    'apiexamples.ajax.redirect_test',
-    'apiexamples.ajax.script_test',
-    'apiexamples.ajax.remove_test',
-    'apiexamples.ajax.adddata_test',
-    'apiexamples.ajax.param_test',
-)
-"""
 
 import logging
 logging.basicConfig(level=logging.DEBUG)
