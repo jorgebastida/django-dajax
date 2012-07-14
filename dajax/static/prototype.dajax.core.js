@@ -1,5 +1,5 @@
-/* Copyright (c) 2009-2010, Benito Jorge Bastida :: For further information check COPYING */
 var Dajax = Class.create();
+
 Dajax.prototype = {
     initialize: function(){},
     process: function(data)

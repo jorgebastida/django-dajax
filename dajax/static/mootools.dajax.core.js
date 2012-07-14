@@ -1,8 +1,7 @@
-/* Copyright (c) 2009-2010, Benito Jorge Bastida :: For further information check COPYING */
 var Dajax = {
     process: function(data)
     {
-        $.each(data, function(i,elem){
+        data.each(function(elem){
         switch(elem.cmd)
         {
             case 'alert':
@@ -14,31 +13,31 @@ var Dajax = {
             break;
 
             case 'as':
-                jQuery.each($(elem.id),function(){ this[elem.prop] = elem.val; });
+                $$(elem.id).each(function(e){ e[elem.prop] = elem.val; });
             break;
 
             case 'addcc':
-                jQuery.each(elem.val,function(){
-                    $(elem.id).addClass(String(this));
+                elem.val.each(function(cssclass){
+                    $$(elem.id).each(function(e){ e.addClass(cssclass);});
                 });
             break;
 
             case 'remcc':
-                jQuery.each(elem.val,function(){
-                    $(elem.id).removeClass(String(this));
+                elem.val.each(function(cssclass){
+                    $$(elem.id).each(function(e){ e.removeClass(cssclass);});
                 });
             break;
 
             case 'ap':
-                jQuery.each($(elem.id),function(){ this[elem.prop] += elem.val; });
+                $$(elem.id).each(function(e){ e[elem.prop] += elem.val; });
             break;
 
             case 'pp':
-                jQuery.each($(elem.id),function(){ this[elem.prop] = elem.val + this[elem.prop]; });
+                $$(elem.id).each(function(e){ e[elem.prop] = elem.val + e[elem.prop]; });
             break;
 
             case 'clr':
-                jQuery.each($(elem.id),function(){ this[elem.prop] = ""; });
+                $$(elem.id).each(function(e){ e[elem.prop]=""; });
             break;
 
             case 'red':
@@ -50,7 +49,7 @@ var Dajax = {
             break;
 
             case 'rm':
-                $(elem.id).remove();
+                $$(elem.id).each(function(e){ e.destroy(); });
             break;
 
             default:
