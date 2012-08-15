@@ -10,7 +10,7 @@ setup(
     url='http://dajaxproject.com',
     license='BSD',
     packages=['dajax'],
-    package_data={'dajax': ['static/*']},
+    package_data={'dajax': ['static/dajax/*']},
     long_description=('dajax is a powerful tool to easily and super-quickly '
                       'develop asynchronous presentation logic in web '
                       'applications using python and almost no JS code. It '
