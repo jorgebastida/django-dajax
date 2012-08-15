@@ -9,7 +9,7 @@ setup(
                  'logic with django and dajaxice'),
     url='http://dajaxproject.com',
     license='BSD',
-    packages=['dajax', 'dajax.core'],
+    packages=['dajax'],
     package_data={'dajax': ['static/*']},
     long_description=('dajax is a powerful tool to easily and super-quickly '
                       'develop asynchronous presentation logic in web '
