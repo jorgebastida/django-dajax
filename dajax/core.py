@@ -10,26 +10,26 @@ class Dajax(object):
         return json.dumps(self.calls)
 
     def alert(self, message):
-        self.calls.append({'cmd': 'alert', 'val': self._clean(message)})
+        self.calls.append({'cmd': 'alert', 'val': message})
 
     def assign(self, id, attribute, value):
-        self.calls.append({'cmd': 'as', 'id': id, 'prop': attribute, 'val': self._clean(value)})
+        self.calls.append({'cmd': 'as', 'id': id, 'prop': attribute, 'val': value})
 
     def add_css_class(self, id, value):
         if not hasattr(value, '__iter__'):
             value = [value]
-        self.calls.append({'cmd': 'addcc', 'id': id, 'val': self._clean(value)})
+        self.calls.append({'cmd': 'addcc', 'id': id, 'val': value})
 
     def remove_css_class(self, id, value):
         if not hasattr(value, '__iter__'):
             value = [value]
-        self.calls.append({'cmd': 'remcc', 'id': id, 'val': self._clean(value)})
+        self.calls.append({'cmd': 'remcc', 'id': id, 'val': value})
 
     def append(self, id, attribute, value):
-        self.calls.append({'cmd': 'ap', 'id': id, 'prop': attribute, 'val': self._clean(value)})
+        self.calls.append({'cmd': 'ap', 'id': id, 'prop': attribute, 'val': value})
 
     def prepend(self, id, attribute, value):
-        self.calls.append({'cmd': 'pp', 'id': id, 'prop': attribute, 'val': self._clean(value)})
+        self.calls.append({'cmd': 'pp', 'id': id, 'prop': attribute, 'val': value})
 
     def clear(self, id, attribute):
         self.calls.append({'cmd': 'clr', 'id': id, 'prop': attribute})
@@ -45,9 +45,3 @@ class Dajax(object):
 
     def add_data(self, data, function):
         self.calls.append({'cmd': 'data', 'val': data, 'fun': function})
-
-    def _clean(self, data):
-        if hasattr(data, '__iter__'):
-            return map(self._clean, data)
-        else:
-            return unicode(data).replace('\n', '').replace('\r', '')
