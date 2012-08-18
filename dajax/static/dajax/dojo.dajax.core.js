@@ -5,7 +5,7 @@ var Dajax = {
         switch(elem.cmd)
         {
             case 'alert':
-                alert(elem.val)
+                alert(elem.val);
             break;
 
             case 'data':
@@ -13,7 +13,16 @@ var Dajax = {
             break;
 
             case 'as':
-                dojo.forEach(dojo.query(elem.id),function(e){ e[elem.prop] = elem.val; });
+                if(elem.prop === 'innerHTML'){
+                    dojo.forEach(dojo.query(elem.id), function(e){
+                        require(["dojo/html"], function(html){
+                            html.set(e, elem.val);
+                        });
+                    });
+                }
+                else{
+                    dojo.forEach(dojo.query(elem.id),function(e){ e[elem.prop] = elem.val; });
+                }
             break;
 
             case 'addcc':

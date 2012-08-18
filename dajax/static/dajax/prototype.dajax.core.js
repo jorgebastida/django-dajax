@@ -1,14 +1,11 @@
-var Dajax = Class.create();
-
-Dajax.prototype = {
-    initialize: function(){},
+var Dajax = {
     process: function(data)
     {
         data.each(function(elem){
         switch(elem.cmd)
         {
             case 'alert':
-                alert(elem.val)
+                alert(elem.val);
             break;
 
             case 'data':
@@ -16,7 +13,12 @@ Dajax.prototype = {
             break;
 
             case 'as':
-                $$(elem.id).each(function(e){e[elem.prop] = elem.val;});
+                if(elem.prop === 'innerHTML'){
+                    $$(elem.id).each(function(e){Element.update(e, elem.val);});
+                }
+                else{
+                    $$(elem.id).each(function(e){e[elem.prop] = elem.val;});
+                }
             break;
 
             case 'addcc':
@@ -61,5 +63,3 @@ Dajax.prototype = {
         });
     }
 };
-
-Dajax = new Dajax();

@@ -5,7 +5,7 @@ var Dajax = {
         switch(elem.cmd)
         {
             case 'alert':
-                alert(elem.val)
+                alert(elem.val);
             break;
 
             case 'data':
@@ -13,7 +13,12 @@ var Dajax = {
             break;
 
             case 'as':
-                jQuery.each($(elem.id),function(){ this[elem.prop] = elem.val; });
+                if(elem.prop == 'innerHTML'){
+                    $(elem.id).html(elem.val);
+                }
+                else{
+                    jQuery.each($(elem.id),function(){ this[elem.prop] = elem.val; });
+                }
             break;
 
             case 'addcc':
