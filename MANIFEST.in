@@ -1,8 +1,7 @@
-include AUTHORS
+include *.py
 include COPYING
+include AUTHORS
+recursive-include dajax *
+recursive-exclude dajax *.pyc
 recursive-include docs *
-recursive-exclude docs *.bat
-recursive-exclude docs .DS_Store
-recursive-exclude docs .gitignore
 prune docs/_build
-
