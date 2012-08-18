@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.9.2
+^^^^
+* Fix unicode issues
+* Fix Internet Explorer issues modifying element's innerHTML
+
 0.9
 ^^^
 * Move dajaxice core from dajaxice.core.Dajax to dajax.core
