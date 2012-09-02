@@ -160,7 +160,7 @@ Usage Example::
 
     def code_example(request):
         dajax = Dajax()
-        dajax.code('my_function();')
+        dajax.script('my_function();')
         return dajax.json()
 
 
