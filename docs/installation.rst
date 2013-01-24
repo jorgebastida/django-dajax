@@ -45,7 +45,7 @@ Dajax supports up to four JS libraries. You should add to your project base temp
 
 For example for jQuery::
 
-    {% static "dajax/jquery.core.js" %}
+    {% static "/static/dajax/jquery.core.js" %}
 
 
 Use Dajax
