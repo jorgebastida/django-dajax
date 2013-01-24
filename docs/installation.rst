@@ -38,14 +38,14 @@ Include dajax in your <head>::
 
 Dajax supports up to four JS libraries. You should add to your project base template the one you need.
 
-* `jQuery 1.7.2 <http://jquery.com/>`_ - ``dajax/jquery.core.js``
-* `Prototype 1.7 <http://www.prototypejs.org>`_ - ``dajax/prototype.core.js``
-* `MooTools 1.4.5 <http://mootools.net/>`_ - ``dajax/mootools.core.js``
-* `Dojo 1.7 <http://www.dojotoolkit.org/>`_ - ``dajax/dojo.core.js``
+* `jQuery 1.7.2 <http://jquery.com/>`_ - ``dajax/jquery.dajax.core.js``
+* `Prototype 1.7 <http://www.prototypejs.org>`_ - ``dajax/prototype.dajax.core.js``
+* `MooTools 1.4.5 <http://mootools.net/>`_ - ``dajax/mootools.dajax.core.js``
+* `Dojo 1.7 <http://www.dojotoolkit.org/>`_ - ``dajax/dojo.dajax.core.js``
 
 For example for jQuery::
 
-    {% static "/static/dajax/jquery.core.js" %}
+    {% static "/static/dajax/jquery.dajax.core.js" %}
 
 
 Use Dajax
