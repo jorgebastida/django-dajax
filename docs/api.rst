@@ -88,7 +88,7 @@ Usage Example::
 
     def append_example(request):
         dajax = Dajax()
-        dajax.assign('#message', 'innerHTML', 'Last message')
+        dajax.append('#message', 'innerHTML', 'Last message')
         return dajax.json()
 
 
