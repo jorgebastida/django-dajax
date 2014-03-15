@@ -19,7 +19,7 @@ Documentation http://readthedocs.org/projects/django-dajax/
 
 Project status
 ----------------
-From ``v0.9.2`` this project is not going to accept new features. In order to not break existing projects using this library, ``django-dajaxice`` will be maintained until ``django 1.8`` is released.
+From ``v0.9.2`` this project is not going to accept new features. In order to not break existing projects using this library, ``django-dajax`` and ``django-dajaxice`` will be maintained until ``django 1.8`` is released.
 
 
 Should I use django-dajax or django-dajaxice?
